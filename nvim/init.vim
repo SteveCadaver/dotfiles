@@ -3,6 +3,7 @@
 call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'joshdick/onedark.vim'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
