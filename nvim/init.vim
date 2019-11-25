@@ -1,11 +1,31 @@
 
 " Required:
-call plug#begin(expand('~/.config/nvim/plugged'))
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 
-Plug 'joshdick/onedark.vim'
-Plug 'cespare/vim-toml'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-call plug#end()
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" themes
+NeoBundle 'joshdick/onedark.vim'
+
+" syntax
+NeoBundle 'cespare/vim-toml'
+
+" git 
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+NeoBundle 'airblade/vim-gitgutter'
+
+" utility
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'Chiel92/vim-autoformat'
+
+call neobundle#end()
 
 " Split window
 nmap sf :split<Return><C-w>w
@@ -21,6 +41,8 @@ map sl <C-w>l
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab>   :tabnext<Return>
 
+" Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
 
 "******************************************************************************
 "" Basic Setup
@@ -30,7 +52,7 @@ syntax on
 " set background=dark
 " colorscheme dracula
 colorscheme onedark
-set number
+set number relativenumber
 set ruler
 set smartindent
 set tabstop=3
