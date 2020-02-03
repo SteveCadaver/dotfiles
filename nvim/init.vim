@@ -1,31 +1,21 @@
 
 " Required:
-set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
+call plug#begin("~/.config/nvim/plugged")
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+Plug 'joshdick/onedark.vim'
 
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" themes
-NeoBundle 'joshdick/onedark.vim'
-
-" syntax
-NeoBundle 'cespare/vim-toml'
+Plug 'cespare/vim-toml'
+Plug 'slim-template/vim-slim'
 
 " git 
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-NeoBundle 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " utility
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'Chiel92/vim-autoformat'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'bling/vim-airline'
+Plug 'rust-lang/rust.vim'
 
-call neobundle#end()
+call plug#end()
 
 " Split window
 nmap sf :split<Return><C-w>w
@@ -41,22 +31,29 @@ map sl <C-w>l
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab>   :tabnext<Return>
 
-" Nerd Tree
-map <C-n> :NERDTreeToggle<CR>
-
 "******************************************************************************
 "" Basic Setup
 "******************************************************************************
 
 syntax on
-" set background=dark
-" colorscheme dracula
+" Colourscheme
 colorscheme onedark
+" Enable current line number and relative line numbers
 set number relativenumber
 set ruler
-set smartindent
-set tabstop=3
-set shiftwidth=3
+
+" Indent 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Filetype specific indentation.
+au FileType python set shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
+
+set list
+
+set listchars=trail:·,tab:――⇥,space:⋆
 set clipboard=unnamed
 set mouse=a
 highlight LineNr ctermfg=DarkGrey
+"let g:deoplete#enable_at_startup = 1

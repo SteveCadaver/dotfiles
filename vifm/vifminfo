@@ -1,0 +1,328 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/Users/steve/
+	..
+1575096004
+'b
+	/Users/steve/bin/
+	..
+1575096004
+'h
+	/Users/steve/
+	..
+1575096004
+'q
+	/Users/steve/repo
+	nmbtz
+1575119413
+'z
+	/Users/steve/.config/vifm
+	..
+1575096004
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/Users/steve/.config/ranger
+	..
+0
+d/Users/steve/.config
+	vifm
+10
+d/Users/steve/.config/vifm
+	colors
+1
+d/Users/steve/.config/vifm/colors
+	..
+0
+d/Users/steve/.config/vifm
+	colors
+1
+d/Users/steve/.config
+	configstore
+2
+d/Users/steve/.config/configstore
+	..
+0
+d/Users/steve/.config
+	configstore
+2
+d/Users/steve/.config/configstore
+	..
+0
+d/Users/steve/.config
+	configstore
+2
+d/Users/steve
+	..
+0
+d/Users
+	steve
+3
+d/
+	Users
+3
+d/Users
+	steve
+3
+d/Users/steve
+	repo
+26
+d/Users/steve/repo
+	nmbtz
+18
+d/Users/steve
+	repo
+26
+d/Users/steve/repo
+	nmbtz
+18
+d/Users/steve/repo/nmbtz
+	..
+0
+d/Users/steve/repo
+	nmbtz
+18
+d/Users/steve/repo/nmbtz
+	office
+1
+d/Users/steve/repo/nmbtz/office
+	extract
+2
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	source
+5
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source
+	java
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java
+	postilion
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion
+	office
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office
+	eftc
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc
+	extract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc/extract
+	upi
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc/extract/upi
+	output
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc/extract/upi/output
+	..
+0
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc/extract/upi
+	output
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc/extract
+	upi
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office/eftc
+	extract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion/office
+	eftc
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java/postilion
+	office
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source/java
+	postilion
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/source
+	java
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	build
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/build
+	..
+0
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	sql
+6
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/sql
+	..
+0
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	test
+7
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test
+	testharness
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	testcases
+7
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases
+	..
+0
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	testcases
+7
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test
+	testharness
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	test
+7
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office
+	extract
+2
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	test
+7
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test
+	testharness
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	build.py
+10
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	build.py
+10
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	build.py
+10
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	build.py
+10
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	build.py
+10
+d/Users/steve/repo/nmbtz/office/extract
+	eftcupisettlementextract
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract
+	test
+7
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test
+	testharness
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	flows
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/flows
+	cmd_disconnect.flo
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	testcases
+6
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases
+	positive_tests
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases/positive_tests
+	0200_sd.tst
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases
+	positive_tests
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	profiles
+5
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/profiles
+	base.pfl
+4
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	testcases
+6
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases
+	positive_tests
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases/positive_tests
+	0200_sd.tst
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/testcases
+	testsuite.config
+3
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	output
+4
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/output
+	expected.txt
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	tools
+7
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/tools
+	file_masker.py
+1
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	output
+4
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness/output
+	result.txt
+2
+d/Users/steve/repo/nmbtz/office/extract/eftcupisettlementextract/test/testharness
+	run.cmd
+8
+d
+
+# Right window history (oldest to newest):
+D/Users/steve/.config/ranger
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+/repo
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0

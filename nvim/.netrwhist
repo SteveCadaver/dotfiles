@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/steve/repo/paycorp/eftcpcdccroutermngportal/source/java/postilion/portal/eftc/dccroutermngportal/ui/bean/providerrule'
+let g:netrw_dirhist_4='/Users/steve/repo/paycorp/eftcpcdccroutermngportal/source/java/postilion/portal/eftc/dccroutermngportal/ui/bean'
+let g:netrw_dirhist_3='/Users/steve/repo/paycorp/eftcpcdccroutermngportal/source/webapp/dccroutermngportal/routingrule'
+let g:netrw_dirhist_2='/Users/steve/repo/node.js/node-jms-sender'
+let g:netrw_dirhist_1='/Users/steve/repo/utils/eftc_agent'
