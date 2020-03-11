@@ -3,6 +3,7 @@
 call plug#begin("~/.config/nvim/plugged")
 
 Plug 'joshdick/onedark.vim'
+Plug 'dag/vim-fish'
 
 Plug 'cespare/vim-toml'
 Plug 'slim-template/vim-slim'
