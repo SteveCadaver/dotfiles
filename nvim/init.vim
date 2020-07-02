@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bling/vim-airline'
 Plug 'rust-lang/rust.vim'
+Plug 'moll/vim-node'
 
 call plug#end()
 
@@ -50,6 +51,7 @@ set softtabstop=4
 
 " Filetype specific indentation.
 au FileType python set shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
+au FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
 
 set list
 
