@@ -33,6 +33,12 @@ map sl <C-w>l
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab>   :tabnext<Return>
 
+" Preview Markdown
+map <Leader>p :!preview <c-r>%<CR><CR>
+
+" Toggle autocompile
+map <Leader>a :!setsid autocomp % &<CR>
+
 "******************************************************************************
 "" Basic Setup
 "******************************************************************************
@@ -52,10 +58,14 @@ set softtabstop=4
 " Filetype specific indentation.
 au FileType python set shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 au FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
+"au FileType rust set shiftwidth=3 tabstop=3 softtabstop=3 noexpandtab
 
+au VimLeave * :!clear
+
+set t_ti=""
 set list
 
-set listchars=trail:·,tab:――⇥,space:⋆
+set listchars=trail:●,tab:\|\ ,space:·
 set clipboard=unnamed
 set mouse=a
 highlight LineNr ctermfg=DarkGrey
