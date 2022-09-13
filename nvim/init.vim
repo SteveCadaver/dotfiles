@@ -3,6 +3,7 @@
 call plug#begin("~/.config/nvim/plugged")
 
 Plug 'joshdick/onedark.vim'
+Plug 'ap/vim-css-color'
 "Plug 'dag/vim-fish'
 Plug 'neovim/nvim-lspconfig'
 
@@ -14,11 +15,15 @@ Plug 'airblade/vim-gitgutter'
 
 " utility
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'bling/vim-airline'
+"Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
+"Plug 'feline-nvim/feline.nvim'
 Plug 'moll/vim-node'
 Plug 'mtdl9/vim-log-highlighting'
 "Plug 'dense-analysis/ale'
+Plug 'vimwiki/vimwiki'
 
+Plug '907th/vim-auto-save'
 " Rust-Lang
 Plug 'rust-lang/rust.vim'
 Plug 'prabirshrestha/async.vim'
@@ -55,6 +60,8 @@ map <Leader>a :!setsid autocomp % &<CR>
 syntax on
 " Colourscheme
 colorscheme onedark
+set tgc
+
 " Enable current line number and relative line numbers
 set number relativenumber
 set ruler
@@ -63,6 +70,9 @@ set ruler
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+
+" Disable selected -> Use Status line
+set noshowmode
 
 " Filetype specific indentation.
 au FileType python set shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
@@ -77,21 +87,43 @@ set list
 set listchars=trail:●,tab:\|\ ,space:·
 set clipboard=unnamed
 set mouse=a
-highlight LineNr ctermfg=DarkGrey
-"let g:deoplete#enable_at_startup = 1
+
+" Line Number Colouring
+highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
+let g:lightline = {
+	\ 'colorscheme': 'one',
+	\ 'background': 'dark',
+	\ }
 
 "******************************************************************************
 "" Rust Language Server 
 "******************************************************************************
-
-if executable('rls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'rls',
-        \ 'cmd': {server_info->['rls']},
-        \ 'allowlist': ['rust'],
-        \ })
+if executable('rust-analyzer')
+  au User lsp_setup call lsp#register_server({
+	\   'name': 'Rust Language Server',
+	\   'cmd': {server_info->['rust-analyzer']},
+	\   'whitelist': ['rust'],
+	\   'initialization_options': {
+	\     'cargo': {
+	\       'buildScripts': {
+	\         'enable': v:true,
+	\       },
+	\     },
+	\     'procMacro': {
+	\       'enable': v:true,
+	\     },
+	\   },
+	\ })
 endif
+
+"if executable('rls')
+"    " pip install python-language-server
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'rls',
+"        \ 'cmd': {server_info->['rls']},
+"        \ 'allowlist': ['rust'],
+"        \ })
+"endif
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
@@ -120,6 +152,12 @@ augroup lsp_install
     au!
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+" Enable Auto-Save for markdown files.
+augroup ft_markdown
+  au!
+  au FileType markdown let b:auto_save = 1
 augroup END
 
 " Enable completion where available.
