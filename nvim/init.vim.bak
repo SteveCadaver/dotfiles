@@ -2,10 +2,12 @@
 " Required:
 call plug#begin("~/.config/nvim/plugged")
 
+" NeoVim Official
+Plug 'neovim/nvim-lspconfig'
+
+" Theme and Colour
 Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color'
-"Plug 'dag/vim-fish'
-Plug 'neovim/nvim-lspconfig'
 
 Plug 'cespare/vim-toml'
 Plug 'slim-template/vim-slim'
@@ -15,15 +17,14 @@ Plug 'airblade/vim-gitgutter'
 
 " utility
 Plug 'christoomey/vim-tmux-navigator'
-"Plug 'bling/vim-airline'
 Plug 'itchyny/lightline.vim'
-"Plug 'feline-nvim/feline.nvim'
 Plug 'moll/vim-node'
 Plug 'mtdl9/vim-log-highlighting'
-"Plug 'dense-analysis/ale'
 Plug 'vimwiki/vimwiki'
-
 Plug '907th/vim-auto-save'
+Plug 'nvim-neorg/neorg' 
+Plug 'nvim-lua/plenary.nvim'
+
 " Rust-Lang
 Plug 'rust-lang/rust.vim'
 Plug 'prabirshrestha/async.vim'
@@ -56,11 +57,15 @@ map <Leader>a :!setsid autocomp % &<CR>
 "******************************************************************************
 "" Basic Setup
 "******************************************************************************
-
+"
+" Syntax Highlighting
 syntax on
 " Colourscheme
 colorscheme onedark
 set tgc
+
+" Line Number Colouring
+highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
 
 " Enable current line number and relative line numbers
 set number relativenumber
@@ -77,19 +82,19 @@ set noshowmode
 " Filetype specific indentation.
 au FileType python set shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 au FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
-"au FileType rust set shiftwidth=3 tabstop=3 softtabstop=3 noexpandtab
 
-au VimLeave * :!clear
+" On file close, the terminal will be cleared.
+"au VimLeave * :!clear
 
 set t_ti=""
 set list
 
 set listchars=trail:●,tab:\|\ ,space:·
 set clipboard=unnamed
+
+" Enable the use of the mouse during all modes.
 set mouse=a
 
-" Line Number Colouring
-highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
 let g:lightline = {
 	\ 'colorscheme': 'one',
 	\ 'background': 'dark',
@@ -115,15 +120,6 @@ if executable('rust-analyzer')
 	\   },
 	\ })
 endif
-
-"if executable('rls')
-"    " pip install python-language-server
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'rls',
-"        \ 'cmd': {server_info->['rls']},
-"        \ 'allowlist': ['rust'],
-"        \ })
-"endif
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
@@ -160,14 +156,22 @@ augroup ft_markdown
   au FileType markdown let b:auto_save = 1
 augroup END
 
-" Enable completion where available.
-" This setting must be set before ALE is loaded.
-"
-" You should not turn this setting on if you wish to use ALE as a completion
-" source for other completion plugins, like Deoplete.
-"let g:ale_completion_enabled = 0
+lua << END
+require('neorg').setup {
+    load = {
+        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+                workspaces = {
+                    notes = "~/notes",
+                },
+            },
+        },
+    },
+}
+END
 
-" LSP configuration
 "lua << END
 "local lspconfig = require('lspconfig')
 "local on_attach = function(client, bufnr)
@@ -217,5 +221,4 @@ augroup END
 "    update_in_insert = true,
 "  }
 ")
-"END
-"
+"END1
