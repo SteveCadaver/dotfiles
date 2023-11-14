@@ -72,6 +72,7 @@ map <Leader>a :!setsid autocomp % &<CR>
 syntax on
 " Colourscheme
 colorscheme onedark
+" colorscheme nord
 set tgc
 
 " Line Number Colouring
