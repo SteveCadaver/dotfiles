@@ -28,10 +28,10 @@ local function on_attach(client, buffer)
 	-- Show diagnostic popup on cursor hover
 	local diag_float_grp = vim.api.nvim_create_augroup("DiagnosticFloat", { clear = true })
 	vim.api.nvim_create_autocmd("CursorHold", {
-	  callback = function()
-		vim.diagnostic.open_float(nil, { focusable = false })
-	  end,
-	  group = diag_float_grp,
+		callback = function()
+			vim.diagnostic.open_float(nil, { focusable = false })
+		end,
+		group = diag_float_grp,
 	})
 
 end
@@ -75,6 +75,7 @@ local opts = {
 		},
 	},
 }
+require("lspconfig").lua_ls.setup{}
 
 require("rust-tools").setup(opts)
 
@@ -119,6 +120,10 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', 'g[', vim.diagnostic.goto_prev)
 vim.keymap.set('n', 'g]', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+
+-- have a fixed column for the diagnostics to appear in
+-- this removes the jitter when warnings/errors flow in
+vim.wo.signcolumn = "yes"
 
 -- Neorg Configuration
 require('neorg').setup {

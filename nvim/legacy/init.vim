@@ -12,6 +12,10 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-path'
 
+"See hrsh7th other plugins for more great completion sources!
+"Snippet engine
+Plug 'hrsh7th/vim-vsnip'
+
 " Adds extra functionality over rust analyzer
 Plug 'simrat39/rust-tools.nvim'
 
