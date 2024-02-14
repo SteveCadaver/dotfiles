@@ -15,6 +15,7 @@ Plug 'hrsh7th/cmp-path'
 "See hrsh7th other plugins for more great completion sources!
 "Snippet engine
 Plug 'hrsh7th/vim-vsnip'
+Plug 'glepnir/lspsaga.nvim'
 
 " Adds extra functionality over rust analyzer
 Plug 'simrat39/rust-tools.nvim'
@@ -23,6 +24,7 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 Plug 'cespare/vim-toml'
 Plug 'slim-template/vim-slim'
@@ -32,16 +34,24 @@ Plug 'airblade/vim-gitgutter'
 
 " utility
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'moll/vim-node'
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'vimwiki/vimwiki'
 Plug '907th/vim-auto-save'
 
+" ChatGPT 
+" Plug 'jackMort/ChatGPT.nvim'
+" Plug 'MunifTanjim/nui.nvim'
+
 " NeOrg
 Plug 'nvim-neorg/neorg' 
-Plug 'nvim-lua/plenary.nvim'
 
 " Rust-Lang
 Plug 'rust-lang/rust.vim'
@@ -74,10 +84,11 @@ map <Leader>a :!setsid autocomp % &<CR>
 "
 " Syntax Highlighting
 syntax on
+
 " Colourscheme
 colorscheme onedark
 " colorscheme nord
-set tgc
+set termguicolors
 
 " Line Number Colouring
 highlight LineNr ctermfg=DarkGrey guifg=DarkGrey

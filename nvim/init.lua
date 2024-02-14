@@ -140,3 +140,31 @@ require('neorg').setup {
 		},
 	},
 }
+
+require('lualine').setup({
+	options = {
+		--theme = "catppuccin",
+		section_separators = { left = '', right = '' },
+		component_separators = { left = '|', right = '|' }
+	},
+	sections = {
+		lualine_a = {'mode'},
+		lualine_b = {'branch', 'diff'},-- diagnostic
+		lualine_c = {'filename'},
+		lualine_x = {'encoding', 'progress'},-- fileformat
+		lualine_y = {'filetype'},
+		lualine_z = {'location'}
+	},
+})
+--require('chatgpt').setup({
+--	api_key_cmd = "pass show api/token/openai",
+--})
+local builtin = require('telescope.builtin')
+
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+require'lspconfig'.tailwindcss.setup{}
+require'lspconfig'.pylsp.setup{}
