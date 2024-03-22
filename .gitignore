@@ -2,3 +2,5 @@ configstore/
 gtk-2.0/
 yarn/
 bundle/
+plugged/
+plugins/
