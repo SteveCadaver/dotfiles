@@ -10,7 +10,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-path'
+
+" Autoformat
+Plug 'stevearc/conform.nvim'
 
 "See hrsh7th other plugins for more great completion sources!
 "Snippet engine
@@ -97,7 +99,7 @@ highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
 set number relativenumber
 set ruler
 
-" Indent 
+" Indent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
