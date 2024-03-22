@@ -4,7 +4,12 @@ require('lualine').setup({
 	options = {
 		--theme = "catppuccin",
 		section_separators = { left = '', right = '' },
-		component_separators = { left = '|', right = '|' }
+		component_separators = { left = '|', right = '|' },
+		globalstatus = false,
+		disabled_filetypes = { -- Filetypes to disable lualine for.
+			statusline = {}, -- only ignores the ft for statusline.
+			winbar = {},    -- only ignores the ft for winbar.
+		},
 	},
 	sections = {
 		lualine_a = {'mode'},
@@ -14,5 +19,6 @@ require('lualine').setup({
 		lualine_y = {'filetype'},
 		lualine_z = {'location'}
 	},
+	inactive_sections = {}
 })
 

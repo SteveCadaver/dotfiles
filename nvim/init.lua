@@ -1,7 +1,29 @@
+--[[ Map `vim` keyword ]]--
+local vim = vim
+
 --[[ Semantic Highlighting ]]--
 require("semantic_highlights")
 
-vim.cmd("source ~/.config/nvim/legacy/init.vim")
+--[[ Vim Plug ]]--
+require("plug")
+
+--[[ Enable syntax Highlighting ]]--
+vim.cmd.syntax("on")
+
+--[[ Enables 24-bit RGB color ]]--
+vim.opt.termguicolors = true
+
+--[[ Theme ]]--
+require("theme")
+
+--[[ Options ]]--
+require("options")
+
+--[[ Mappings ]]--
+require("mappings")
+
+--[[ FileType ]]--
+require("filetype")
 
 --[[ Diagnostis ]]--
 require("diagnostics")

@@ -4,17 +4,15 @@ This repository is meant to hold my personal configuration of shell, editor and 
 
 The configuration within this project is typically held within *~/.config*. 
 
-## Featured Applications
 
-
-### NeoVim
+## NeoVim
 
 NeoVim with additional configuration for mapping keys for window splitting, file navigation, rich plugin environment and Lua support. The config can be found in the `nvim` directory and predominantly is made up of *Vim Script*; *Ruby*; and *Lua* files. Where the main configuration file is *init.lua* and then sourcing in some legacy *Vim Script* configuration. Personnaly I prefer *Vim Script* for simple file type and autocommands are configured, whereas *Lua* is for suitable for configuring various plugins where options and settings run multiple layers deep. I also added so plugin specific *Lua* config files.
 ```
 init.lua
-legacy/
+legacy
 └── init.vim
-lua/
+lua
 ├── diagnostics.lua
 ├── plugins
 │   ├── cmp.lua
@@ -25,6 +23,9 @@ lua/
 │   └── telescope.lua
 └── semantic_highlights.lua
 ```
+### Theme
+
+The prefered `theme` here is [OneDark](https://github.com/navarasu/onedark.nvim "Atom One Dark Theme") with the `darker` style set.
 
 ![NeoVim/Tmux View:](./resources/neovim-tmux-preview.png "NeoVim/Tmux")
 
