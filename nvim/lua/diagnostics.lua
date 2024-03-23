@@ -1,13 +1,11 @@
 
---[[ Diagnostics Start ]]--
+--[[ Diagnostics ]]--
 
 -- Set updatetime for CursorHold
 -- 300ms of no cursor movement to trigger CursorHold
-vim.opt.updatetime = 100
+vim.opt.updatetime = 300
 
--- You can add this in your init.lua
--- or a plugin script
-
+--[[ Diagnostics Symbols ]]--
 local function sign_define(args)
 	vim.fn.sign_define(args.name, {
 		texthl = args.name,
@@ -46,5 +44,3 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 -- have a fixed column for the diagnostics to appear in
 -- this removes the jitter when warnings/errors flow in
 vim.wo.signcolumn = "yes"
-
---[[ Diagnostics End ]]--
