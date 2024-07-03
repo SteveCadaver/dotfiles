@@ -7,21 +7,26 @@ The configuration within this project is typically held within *~/.config*.
 
 ## NeoVim
 
-NeoVim with additional configuration for mapping keys for window splitting, file navigation, rich plugin environment and Lua support. The config can be found in the `nvim` directory and predominantly is made up of *Vim Script*; *Ruby*; and *Lua* files. Where the main configuration file is *init.lua* and then sourcing in some legacy *Vim Script* configuration. Personnaly I prefer *Vim Script* for simple file type and autocommands are configured, whereas *Lua* is for suitable for configuring various plugins where options and settings run multiple layers deep. I also added so plugin specific *Lua* config files.
+NeoVim with additional configuration for mapping keys for window splitting, file navigation, rich plugin environment and Lua support. The config can be found in the `nvim` directory and predominantly is made up of *Vim Script*; *Ruby*; and *Lua* files. Where the main configuration file is *init.lua* and now completely removed the legacy *Vim Script* configuration. Personnaly I prefer *Vim Script* for simple file type and autocommands are configured, whereas *Lua* is for suitable for configuring various plugins where options and settings run multiple layers deep. I also added so plugin specific *Lua* config files.
 ```
 init.lua
-legacy
-└── init.vim
-lua
+lua/
 ├── diagnostics.lua
+├── filetype.lua
+├── mappings.lua
+├── options.lua
 ├── plugins
 │   ├── cmp.lua
 │   ├── conform.lua
+│   ├── harpoon.lua
 │   ├── lspconfig.lua
 │   ├── lualine.lua
+│   ├── rustaceanvim.lua
 │   ├── rust-tools.lua
 │   └── telescope.lua
-└── semantic_highlights.lua
+├── plug.lua
+├── semantic_highlights.lua
+└── theme.lua
 ```
 ### Theme
 
@@ -36,9 +41,9 @@ NeoVim plug-ins are managed by Vim Plug and the following list of plug-ins are u
 - vimwiki
 - lualine.nvim
 - telescope.nvim
-- nord-vim
 - vim-tmux-navigator
 - nvim-treesitter
+- harpoon
 - vim-log-highlighting
 - vim-auto-save
 - nvim-cmp
@@ -49,7 +54,7 @@ NeoVim plug-ins are managed by Vim Plug and the following list of plug-ins are u
 - plenary.nvim
 - rust.vim
 - cmp-vsnip
-- rust-tools.nvim
+- rustaceanvim
 - nvim-lspconfig
 - catppuccin
 - conform.nvim
