@@ -7,6 +7,8 @@ vim.call('plug#begin')
 
 --[[ NeoVim Official ]]--
 Plug('neovim/nvim-lspconfig')
+Plug('mrcjkb/rustaceanvim')
+Plug('mfussenegger/nvim-dap')
 
 --[[ Autocompletion framework ]]--
 Plug('hrsh7th/nvim-cmp')
@@ -25,12 +27,12 @@ Plug('hrsh7th/vim-vsnip')
 Plug('glepnir/lspsaga.nvim')
 
 --[[ Adds extra functionality over rust analyzer ]]--
-Plug('simrat39/rust-tools.nvim')
+--Plug('simrat39/rust-tools.nvim')
 
 --[[ Theme and Colour ]]--
 Plug('navarasu/onedark.nvim')
 Plug('ap/vim-css-color')
-Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
+--Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 
 Plug('cespare/vim-toml')
 Plug 'slim-template/vim-slim'
@@ -38,13 +40,18 @@ Plug 'slim-template/vim-slim'
 --[[ git ]]--
 Plug('airblade/vim-gitgutter')
 
---[[ Utility ]]--
+--[[
+-- Utility Syntax highlighting 
+-- remember to install languages using the TSInstall
+-- Also used for highlighting code snippets in hover menu
+]]--
 Plug('nvim-treesitter/nvim-treesitter', {
 	['do'] = ':TSUpdate'
 })
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-lualine/lualine.nvim')
+Plug('ThePrimeagen/harpoon', { ['branch'] = 'harpoon2' })
 --[[ Icons in your statusline choose one of these ]]--
 Plug('nvim-tree/nvim-web-devicons')
 Plug('christoomey/vim-tmux-navigator')

@@ -4,4 +4,5 @@ yarn/
 bundle/
 plugged/
 plugins/
+!nvim/lua/plugins/
 autoload/

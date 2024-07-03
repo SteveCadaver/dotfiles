@@ -43,5 +43,8 @@ require("plugins.conform")
 --[[ Lualine - Editor Status Bar ]]--
 require("plugins.lualine")
 
---[[ Rust-Tools - Rust Specific LSP tools ]]--
-require("plugins.rust-tools")
+--[[ rustaceanvim - Rust Specific LSP tools ]]--
+require("plugins.rustaceanvim")
+
+--[[ Harpoon ]]--
+require("plugins.harpoon")

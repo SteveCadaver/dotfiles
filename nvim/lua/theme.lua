@@ -19,7 +19,7 @@ require('onedark').setup {
 	},
 	diagnostics = {
 		darker = true,
-		undercurl = true
+		undercurl = false
 	}
 }
 require('onedark').load()
