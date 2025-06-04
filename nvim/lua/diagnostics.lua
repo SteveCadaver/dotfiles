@@ -6,20 +6,22 @@
 vim.opt.updatetime = 300
 
 --[[ Diagnostics Symbols ]]--
-local function sign_define(args)
-	vim.fn.sign_define(args.name, {
-		texthl = args.name,
-		text = args.text,
-		numhl = ''
-	})
-end
-
-sign_define({name = 'DiagnosticSignError', text = ''})
-sign_define({name = 'DiagnosticSignWarn', text = ''})
-sign_define({name = 'DiagnosticSignHint', text = ''})
-sign_define({name = 'DiagnosticSignInfo', text = ''})
-
 vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = '',
+			[vim.diagnostic.severity.WARN] = '',
+			[vim.diagnostic.severity.HINT] = '',
+			[vim.diagnostic.severity.INFO] = '',
+		},
+		linehl = {
+			[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+		},
+		numhl = {
+			[vim.diagnostic.severity.WARN] = 'WarningMsg',
+			[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+		}
+	},
 	float = {
 		border = 'rounded',
 	},

@@ -10,6 +10,8 @@ Plug('neovim/nvim-lspconfig')
 Plug('mrcjkb/rustaceanvim')
 Plug('mfussenegger/nvim-dap')
 
+Plug('numToStr/Comment.nvim')
+
 --[[ Autocompletion framework ]]--
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')

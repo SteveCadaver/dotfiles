@@ -13,6 +13,9 @@ vim.cmd.syntax("on")
 --[[ Enables 24-bit RGB color ]]--
 vim.opt.termguicolors = true
 
+--[[ Code Comment]]--
+require("comment")
+
 --[[ Theme ]]--
 require("theme")
 
@@ -48,3 +51,9 @@ require("plugins.rustaceanvim")
 
 --[[ Harpoon ]]--
 require("plugins.harpoon")
+
+--[[ Tailwind ]]--
+require("plugins.tailwind").setup({})
+
+--[[ TreeSitter ]]--
+require("plugins.treesitter")
