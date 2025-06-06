@@ -21,6 +21,9 @@ Plug('hrsh7th/cmp-path')
 --[[ Autoformat ]]--
 Plug('stevearc/conform.nvim')
 
+--[[ Toast/Notifications ]]--
+Plug 'rcarriga/nvim-notify'
+
 --[[
 --See hrsh7th other plugins for more great completion sources!
 --Snippet engine

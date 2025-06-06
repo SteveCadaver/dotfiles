@@ -13,6 +13,9 @@ vim.cmd.syntax("on")
 --[[ Enables 24-bit RGB color ]]--
 vim.opt.termguicolors = true
 
+--[[ Remap vim.notify to nvim-notify ]]--
+vim.notify = require('notify')
+
 --[[ Code Comment]]--
 require("comment")
 

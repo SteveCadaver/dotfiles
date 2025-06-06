@@ -1,5 +1,14 @@
 local M = {}
 
+M.opts = {
+	title = '[tailwind]',
+	on_open = function(win)
+		local buf = vim.api.nvim_win_get_buf(win)
+		-- display the output as markdown
+		vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+	end
+}
+
 local function get_project_root()
 	local cwd = vim.fn.getcwd()
 	local root = vim.fn.findfile("tailwind.config.js", cwd .. ";")
@@ -10,15 +19,6 @@ local function get_project_root()
 	if root ~= "" then
 		return vim.fn.fnamemodify(root, ":h")
 	end
-end
-
--- Clear the notification window after timeout
--- period delay.
---
-local function clear_notification(timeout)
-	vim.defer_fn(function()
-		vim.api.nvim_echo({}, false, {})
-	end, timeout)
 end
 
 local function jobstart()
@@ -34,11 +34,11 @@ local function jobstart()
 
 	-- Ensure paths exist
 	if vim.fn.filereadable(input) == 0 then
-		vim.notify("Tailwind input file not found: " .. input, vim.log.levels.WARN)
+		vim.notify("Input file not found: " .. input, vim.log.levels.ERROR, M.opts)
 		return
 	end
 	if vim.fn.filewritable(output) == 0 then
-		vim.notify("Tailwind output file not found, or could not be written: " .. input, vim.log.levels.WARN)
+		vim.notify("Output file not found, or could not be written: " .. input, vim.log.levels.ERROR, M.opts)
 		return
 	end
 
@@ -56,18 +56,22 @@ local function jobstart()
 			detach = true,
 			on_exit = function(_, code, _)
 				if code == 0 then
-					vim.schedule(function()
-						vim.api.nvim_echo({
-							{ "[tailwindcss] ", "String" },
-						}, false, {})
-						clear_notification(2000)
-					end)
-				else
-					vim.schedule(function()
-						vim.notify("[tailwindcss]   : " .. code, vim.log.levels.ERROR)
-					end)
+					vim.notify("Successfully written " .. output, vim.log.levels.INFO, M.opts)
 				end
 			end,
+			on_stderr = function(_, err, _)
+				local done_in = "Done in "
+				err = err or {}
+				-- assumes that Tailwind outputs 'Done in xxms', exit code is still 0
+				if string.find(err[3],done_in) then
+					return
+				end
+				if err[3] then
+					vim.notify(err[3], vim.log.levels.ERROR, M.opts)
+				else
+					vim.notify("Could not write " .. output, vim.log.levels.ERROR, M.opts)
+				end
+			end
 		})
 end
 
