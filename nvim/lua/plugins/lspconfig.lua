@@ -1,6 +1,8 @@
+--[[ Map 'vim' keyword ]]--
+local vim = vim
 
 --[[ Configure Lua Lsp - [lua_ls] ]]--
-require("lspconfig").lua_ls.setup {
+vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
 			runtime = {
@@ -19,19 +21,19 @@ require("lspconfig").lua_ls.setup {
 			telemetry = { enable = false },
 		}
 	}
-}
+})
 
 --[[ Configure TailWindCSS Lsp ]]--
-require("lspconfig").tailwindcss.setup{}
+vim.lsp.enable("tailwindcss")
 
 --[[ Configure Python Lsp ]]--
-require("lspconfig").pylsp.setup{}
+vim.lsp.enable("pylsp")
 
 --[[ Configure Zig Lsp ]]--
-require("lspconfig").zls.setup{}
+vim.lsp.enable("zls")
 
 --[[ Configure Typescript Lsp ]] --
-require("lspconfig").ts_ls.setup({
+vim.lsp.config("ts_ls", {
 	-- Initial options for the TypeScript language server
 	init_options = {
 		plugins = {
@@ -57,3 +59,5 @@ require("lspconfig").ts_ls.setup({
 		'vue'                -- Vue.js single-file components (.vue)
 	},
 })
+
+vim.lsp.enable("jinja_lsp")

@@ -37,6 +37,9 @@ require("diagnostics")
 --[[ Telescope - Fuzzy Finder ]]--
 require("plugins.telescope")
 
+--[[ Mason - Language Server Management ]]--
+require("plugins.mason")
+
 --[[ LSPconfig - Language Server Config ]]--
 require("plugins.lspconfig")
 
@@ -49,8 +52,14 @@ require("plugins.conform")
 --[[ Lualine - Editor Status Bar ]]--
 require("plugins.lualine")
 
+--[[ Tree - File Explorer ]]--
+require("plugins.nvim-tree")
+
 --[[ rustaceanvim - Rust Specific LSP tools ]]--
 require("plugins.rustaceanvim")
+
+--[[ Gitsigns - git diff tracking ]]--
+require("plugins.gitsigns")
 
 --[[ Harpoon ]]--
 require("plugins.harpoon")

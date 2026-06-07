@@ -15,6 +15,7 @@ Plug('numToStr/Comment.nvim')
 --[[ Autocompletion framework ]]--
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
+Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-vsnip')
 Plug('hrsh7th/cmp-path')
 
@@ -24,11 +25,8 @@ Plug('stevearc/conform.nvim')
 --[[ Toast/Notifications ]]--
 Plug 'rcarriga/nvim-notify'
 
---[[
---See hrsh7th other plugins for more great completion sources!
---Snippet engine
-]]--
-Plug('hrsh7th/vim-vsnip')
+Plug ('mason-org/mason.nvim')
+
 Plug('glepnir/lspsaga.nvim')
 
 --[[ Adds extra functionality over rust analyzer ]]--
@@ -43,21 +41,23 @@ Plug('cespare/vim-toml')
 Plug 'slim-template/vim-slim'
 
 --[[ git ]]--
-Plug('airblade/vim-gitgutter')
+--Plug('airblade/vim-gitgutter')
+Plug('lewis6991/gitsigns.nvim')
 
 --[[
 -- Utility Syntax highlighting 
 -- remember to install languages using the TSInstall
 -- Also used for highlighting code snippets in hover menu
 ]]--
-Plug('nvim-treesitter/nvim-treesitter', {
-	['do'] = ':TSUpdate'
-})
+-- Plug('nvim-treesitter/nvim-treesitter', {
+--	['do'] = ':TSUpdate'
+--})
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-lualine/lualine.nvim')
 Plug('ThePrimeagen/harpoon', { ['branch'] = 'harpoon2' })
 --[[ Icons in your statusline choose one of these ]]--
+Plug('nvim-tree/nvim-tree.lua')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('christoomey/vim-tmux-navigator')
 Plug('moll/vim-node')
@@ -69,6 +69,9 @@ Plug('907th/vim-auto-save')
 -- Depricated view rustaceanvim
 ]]--
 Plug('rust-lang/rust.vim')
+
+--[[ Helm Support ]] --
+Plug('towolf/vim-helm')
 
 vim.call('plug#end')
 
